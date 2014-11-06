@@ -14,7 +14,7 @@ namespace BugSquisherRetry
 {
     class Sprite
     {
-                public Texture2D Texture;
+        public Texture2D Texture;
 
         protected List<Rectangle> frames = new List<Rectangle>();
         private int frameWidth = 0;
@@ -75,7 +75,7 @@ namespace BugSquisherRetry
         {
             get { return origin; }
             set { origin = value; }
-        }        
+        }
 
         public Color TintColor
         {

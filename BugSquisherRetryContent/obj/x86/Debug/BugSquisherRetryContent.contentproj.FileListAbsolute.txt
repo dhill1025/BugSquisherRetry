@@ -1,1 +1,2 @@
 C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquisherRetry\BugSquisherRetryContent\obj\x86\Debug\BugSquisherRetryContent.contentprojResolveAssemblyReference.cache
+C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetryContent\obj\x86\Debug\BugSquisherRetryContent.contentprojResolveAssemblyReference.cache

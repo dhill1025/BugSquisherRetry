@@ -20,11 +20,12 @@ namespace BugSquisherRetry
         SpriteBatch spriteBatch;
         Texture2D background, spritesheet;
 
-        List<Sprite> bugs = new List<Sprite>();
+        List<Bug> bugs = new List<Bug>();
 
         Random rnd = new Random();
+        int timer = 0;
 
-        int bugsNum = 100;
+        int bugsNum = 60;
 
         public Game1()
         {
@@ -41,7 +42,7 @@ namespace BugSquisherRetry
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            this.IsMouseVisible = true;
             base.Initialize();
         }
 
@@ -56,12 +57,18 @@ namespace BugSquisherRetry
 
             background = Content.Load<Texture2D>("background");
             spritesheet = Content.Load<Texture2D>("spritesheet");
-
-            for (int i = 0; i < bugsNum; i++)
+            
+            if (timer == 120)
             {
-                int bugX = rnd.Next(0, 3);
-                int bugY = rnd.Next(0, 2);
-                Sprite bugs = new Sprite(new Vector2(rnd.Next(-450, -65), rnd.Next(65, 450)), spritesheet, new Rectangle(64 * bugX, 64 * bugY, 64, 64), new Vector2(rnd.Next(40, 150), rnd.Next(-40, 40)));
+                timer = 0;
+                for (int i = 0; i < bugsNum; i++)
+                {
+                    int bugX = rnd.Next(0, 3);
+                    int bugY = rnd.Next(0, 2);
+                    Bug bug = new Bug(new Vector2(rnd.Next(-450, -65), rnd.Next(65, 450)), spritesheet, new Rectangle(64 * bugX, 64 * bugY, 64, 64), new Vector2(rnd.Next(40, 150), rnd.Next(-40, 40)));
+
+                    bugs.Add(bug);
+                }
             }
 
 
@@ -74,6 +81,7 @@ namespace BugSquisherRetry
         /// </summary>
         protected override void UnloadContent()
         {
+            
             // TODO: Unload any non ContentManager content here
         }
 
@@ -88,8 +96,25 @@ namespace BugSquisherRetry
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            
+
+            Vector2 target = Vector2.Zero;
+
+            MouseState ms = Mouse.GetState();
+
+            if (ms.LeftButton == ButtonState.Pressed)
+            {
+                target = new Vector2(ms.X, ms.Y);
+            }
+
+
+
             // TODO: Add your update logic here
-            bugs.Update(gameTime);
+            for (int i = 0; i < bugs.Count; i++)
+            {
+                bugs[i].Target = target;
+                bugs[i].Update(gameTime);
+            }
 
             base.Update(gameTime);
         }

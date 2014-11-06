@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2014-11-05T07:52:04.538-05:00</Time>
+      <Output>C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2014-11-06T07:55:00.8792-05:00</Time>
     </Item>
     <Item>
       <Source>spritesheet.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\spritesheet.xnb</Output>
-      <Time>2014-11-05T07:52:04.549-05:00</Time>
+      <Output>C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\spritesheet.xnb</Output>
+      <Time>2014-11-06T07:55:00.8852-05:00</Time>
     </Item>
     <Item>
       <Source>windows.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\windows.xnb</Output>
-      <Time>2014-11-05T07:52:04.551-05:00</Time>
+      <Output>C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\windows.xnb</Output>
+      <Time>2014-11-06T07:55:00.8902-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -34,10 +34,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquisherRetry\BugSquisherRetryContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquisherRetry\BugSquisherRetry\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquisherRetry\BugSquisherRetryContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetryContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetryContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
