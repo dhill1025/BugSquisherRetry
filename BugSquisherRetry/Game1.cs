@@ -20,6 +20,8 @@ namespace BugSquisherRetry
         SpriteBatch spriteBatch;
         Texture2D background, spritesheet;
 
+        
+
         List<Bug> bugs = new List<Bug>();
 
         Random rnd = new Random();
@@ -57,7 +59,8 @@ namespace BugSquisherRetry
 
             background = Content.Load<Texture2D>("background");
             spritesheet = Content.Load<Texture2D>("spritesheet");
-            
+
+
             if (timer == 120)
             {
                 timer = 0;
@@ -96,7 +99,8 @@ namespace BugSquisherRetry
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            
+            if (timer < 121)
+                timer++;
 
             Vector2 target = Vector2.Zero;
 
@@ -106,7 +110,6 @@ namespace BugSquisherRetry
             {
                 target = new Vector2(ms.X, ms.Y);
             }
-
 
 
             // TODO: Add your update logic here
