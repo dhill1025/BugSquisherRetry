@@ -37,7 +37,7 @@ namespace BugSquisherRetry
                 velocity.Normalize();
                 velocity *= 100;
                 Rotation = (float)Math.Atan2(velocity.Y, Velocity.X);
-
+                
                 
 
             }

@@ -20,12 +20,11 @@ namespace BugSquisherRetry
         SpriteBatch spriteBatch;
         Texture2D background, spritesheet;
 
-        
+        Sprite hand;
 
         List<Bug> bugs = new List<Bug>();
 
         Random rnd = new Random();
-        int timer = 0;
 
         int bugsNum = 60;
 
@@ -60,10 +59,8 @@ namespace BugSquisherRetry
             background = Content.Load<Texture2D>("background");
             spritesheet = Content.Load<Texture2D>("spritesheet");
 
+            Sprite hand = new Sprite(new Vector2(0,0),spritesheet, new Rectangle(135, 200, 44, 44));
 
-            if (timer == 120)
-            {
-                timer = 0;
                 for (int i = 0; i < bugsNum; i++)
                 {
                     int bugX = rnd.Next(0, 3);
@@ -72,11 +69,8 @@ namespace BugSquisherRetry
 
                     bugs.Add(bug);
                 }
+                
             }
-
-
-            // TODO: use this.Content to load your game content here
-        }
 
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
@@ -99,8 +93,7 @@ namespace BugSquisherRetry
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            if (timer < 121)
-                timer++;
+
 
             Vector2 target = Vector2.Zero;
 
@@ -111,6 +104,7 @@ namespace BugSquisherRetry
                 target = new Vector2(ms.X, ms.Y);
             }
 
+            hand.Location = new Vector2( ms.X, ms.Y);
 
             // TODO: Add your update logic here
             for (int i = 0; i < bugs.Count; i++)
@@ -133,6 +127,8 @@ namespace BugSquisherRetry
             spriteBatch.Begin();
 
             spriteBatch.Draw(background, Vector2.Zero, Color.White);
+
+            hand.Draw(spriteBatch);
 
             for (int i = 0; i < bugs.Count; i++)
             {
