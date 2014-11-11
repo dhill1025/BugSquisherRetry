@@ -58,8 +58,8 @@ namespace BugSquisherRetry
 
             background = Content.Load<Texture2D>("background");
             spritesheet = Content.Load<Texture2D>("spritesheet");
-
-            Sprite hand = new Sprite(new Vector2(0,0),spritesheet, new Rectangle(135, 200, 44, 44));
+            hand = new Sprite(new Vector2(0,0), spritesheet, new Rectangle(135, 200, 44, 44), new Vector2(0, 0));
+            
 
                 for (int i = 0; i < bugsNum; i++)
                 {
@@ -93,24 +93,35 @@ namespace BugSquisherRetry
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            MouseState ms = Mouse.GetState();
+
+            for (int i = 0; i < 60; i++)
+            {
+                if (hand.IsBoxColliding(bugs[i].BoundingBoxRect) && ms.LeftButton == ButtonState.Pressed)
+                {
+                    bugs[i].frames[0] = new Rectangle(0, 143, 130, 100);
+                    bugs[i].Velocity = new Vector2(0, 0);
+                }
+            }
 
 
             Vector2 target = Vector2.Zero;
 
-            MouseState ms = Mouse.GetState();
+            
 
             if (ms.LeftButton == ButtonState.Pressed)
             {
                 target = new Vector2(ms.X, ms.Y);
             }
 
-            hand.Location = new Vector2( ms.X, ms.Y);
+            hand.Location = new Vector2(ms.X -25, ms.Y-25);
 
             // TODO: Add your update logic here
             for (int i = 0; i < bugs.Count; i++)
             {
                 bugs[i].Target = target;
                 bugs[i].Update(gameTime);
+                //bugs[i].Velocity*=new Vector2(100, rnd.Next(-100,100));
             }
 
             base.Update(gameTime);
@@ -123,11 +134,14 @@ namespace BugSquisherRetry
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            MouseState ms = Mouse.GetState();
 
             spriteBatch.Begin();
 
             spriteBatch.Draw(background, Vector2.Zero, Color.White);
 
+            
+            
             hand.Draw(spriteBatch);
 
             for (int i = 0; i < bugs.Count; i++)

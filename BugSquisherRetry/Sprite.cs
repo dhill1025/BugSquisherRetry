@@ -16,7 +16,7 @@ namespace BugSquisherRetry
     {
         public Texture2D Texture;
 
-        protected List<Rectangle> frames = new List<Rectangle>();
+        public List<Rectangle> frames = new List<Rectangle>();
         private int frameWidth = 0;
         private int frameHeight = 0;
         private int currentFrame;

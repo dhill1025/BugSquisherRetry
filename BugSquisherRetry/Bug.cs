@@ -26,7 +26,6 @@ namespace BugSquisherRetry
             Target = Vector2.Zero;
         }
 
-
         public override void Update(GameTime gameTime)
         {
             if (Target != Vector2.Zero)
