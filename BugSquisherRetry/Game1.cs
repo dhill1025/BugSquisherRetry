@@ -43,7 +43,7 @@ namespace BugSquisherRetry
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            this.IsMouseVisible = true;
+            //this.IsMouseVisible = true;
             base.Initialize();
         }
 
@@ -99,8 +99,10 @@ namespace BugSquisherRetry
             {
                 if (hand.IsBoxColliding(bugs[i].BoundingBoxRect) && ms.LeftButton == ButtonState.Pressed)
                 {
+                    
                     bugs[i].frames[0] = new Rectangle(0, 143, 130, 100);
                     bugs[i].Velocity = new Vector2(0, 0);
+                    //bugs[i].State = BugState.DEADASHELL;
                 }
             }
 
@@ -109,7 +111,7 @@ namespace BugSquisherRetry
 
             
 
-            if (ms.LeftButton == ButtonState.Pressed)
+            if (ms.RightButton == ButtonState.Pressed)
             {
                 target = new Vector2(ms.X, ms.Y);
             }
@@ -121,6 +123,24 @@ namespace BugSquisherRetry
             {
                 bugs[i].Target = target;
                 bugs[i].Update(gameTime);
+                bugs[i].State = BugState.MOVING;
+
+                for (int j = 0; j < bugs.Count; j++)
+                {
+                    if (i == j)
+                        continue;
+
+                    float dist = Vector2.Distance(bugs[i].Center, bugs[j].Center);
+
+                    if (dist < 50 && bugs[i].Center.X < bugs[j].Center.X)
+                    {
+                        bugs[i].State = BugState.WAITING;
+                    }
+                    else if (bugs[i].State == BugState.WAITING)
+                    {
+                       // bugs[i].State = BugState.MOVING;
+                    }
+                }
                 //bugs[i].Velocity*=new Vector2(100, rnd.Next(-100,100));
             }
 

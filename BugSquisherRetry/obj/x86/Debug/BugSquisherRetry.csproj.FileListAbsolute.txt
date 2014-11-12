@@ -7,7 +7,6 @@ C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquish
 C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquisherRetry\BugSquisherRetry\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquisherRetry\BugSquisherRetry\obj\x86\Debug\BugSquisherRetry.exe
 C:\Users\EAHSCS\Documents\Visual Studio 2010\Projects\BugSquisherRetry\BugSquisherRetry\BugSquisherRetry\obj\x86\Debug\BugSquisherRetry.pdb
-C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\obj\x86\Debug\BugSquisherRetry.csprojResolveAssemblyReference.cache
 C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\obj\x86\Debug\BugSquisherRetry.exe
 C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\background.xnb
