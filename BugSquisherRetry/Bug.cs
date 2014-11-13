@@ -80,7 +80,7 @@ namespace BugSquisherRetry
             if (State == BugState.DEADASHELL)
             {
                 Vector2 velocity = this.Velocity;
-                velocity.Normalize();
+                //velocity.Normalize();
                 velocity *= 0;
 
 

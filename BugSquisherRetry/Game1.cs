@@ -18,7 +18,7 @@ namespace BugSquisherRetry
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Texture2D background, spritesheet;
+        Texture2D background, spritesheet, Ghost;
 
         Sprite hand;
 
@@ -26,7 +26,7 @@ namespace BugSquisherRetry
 
         Random rnd = new Random();
 
-        int bugsNum = 60;
+        int bugsNum = 100;
 
         public Game1()
         {
@@ -58,6 +58,7 @@ namespace BugSquisherRetry
 
             background = Content.Load<Texture2D>("background");
             spritesheet = Content.Load<Texture2D>("spritesheet");
+            Ghost = Content.Load<Texture2D>("Ghost");
             hand = new Sprite(new Vector2(0,0), spritesheet, new Rectangle(135, 200, 44, 44), new Vector2(0, 0));
             
 
@@ -78,7 +79,13 @@ namespace BugSquisherRetry
         /// </summary>
         protected override void UnloadContent()
         {
-            
+            for (int i = 0; i < bugs.Count; i++)
+            {
+                if (bugs[i].Location.X > 820)
+                {
+                    bugs.Remove(bugs[i]);
+                }
+            }
             // TODO: Unload any non ContentManager content here
         }
 
@@ -95,14 +102,15 @@ namespace BugSquisherRetry
 
             MouseState ms = Mouse.GetState();
 
-            for (int i = 0; i < 60; i++)
+            for (int i = 0; i < 100; i++)
             {
                 if (hand.IsBoxColliding(bugs[i].BoundingBoxRect) && ms.LeftButton == ButtonState.Pressed)
                 {
                     
-                    bugs[i].frames[0] = new Rectangle(0, 143, 130, 100);
-                    bugs[i].Velocity = new Vector2(0, 0);
-                    //bugs[i].State = BugState.DEADASHELL;
+                    bugs[i].frames[0] = new Rectangle(243, 238, 25, 40);
+                    //bugs[i].FlipHorizontal();
+                    //bugs[i].Velocity = new Vector2(0, 0);
+                    bugs[i].State = BugState.DEADASHELL;
                 }
             }
 

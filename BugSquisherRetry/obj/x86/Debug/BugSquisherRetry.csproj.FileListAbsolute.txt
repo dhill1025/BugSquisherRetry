@@ -15,3 +15,5 @@ C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug
 C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\BugSquisherRetry.exe
 C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\BugSquisherRetry.pdb
 C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\obj\x86\Debug\BugSquisherRetry.pdb
+C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\obj\x86\Debug\BugSquisherRetry.csprojResolveAssemblyReference.cache
+C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\Ghost.xnb
