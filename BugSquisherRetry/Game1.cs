@@ -107,8 +107,8 @@ namespace BugSquisherRetry
                 if (hand.IsBoxColliding(bugs[i].BoundingBoxRect) && ms.LeftButton == ButtonState.Pressed)
                 {
                     
-                    bugs[i].frames[0] = new Rectangle(243, 238, 25, 40);
-                    //bugs[i].FlipHorizontal();
+                    bugs[i].frames[0] = new Rectangle(7, 452, 25, 40);
+                    bugs[i].FlipHorizontal = true;
                     //bugs[i].Velocity = new Vector2(0, 0);
                     bugs[i].State = BugState.DEADASHELL;
                 }

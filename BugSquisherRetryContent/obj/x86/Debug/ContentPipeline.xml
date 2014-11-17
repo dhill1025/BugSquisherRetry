@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2014-11-13T07:26:06.8646-05:00</Time>
+      <Time>2014-11-17T07:55:32.6024-05:00</Time>
     </Item>
     <Item>
       <Source>spritesheet.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\spritesheet.xnb</Output>
-      <Time>2014-11-13T08:12:30.5446-05:00</Time>
+      <Time>2014-11-17T08:31:14.7324-05:00</Time>
     </Item>
     <Item>
       <Source>windows.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\windows.xnb</Output>
-      <Time>2014-11-13T07:26:06.8756-05:00</Time>
+      <Time>2014-11-17T07:55:32.6404-05:00</Time>
     </Item>
     <Item>
       <Source>Ghost.jpg</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\EAHSCS\Documents\GitHub\BugSquisherRetry\BugSquisherRetry\bin\x86\Debug\Content\Ghost.xnb</Output>
-      <Time>2014-11-13T07:37:51.2976-05:00</Time>
+      <Time>2014-11-17T07:55:32.5624-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
